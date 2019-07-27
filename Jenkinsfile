@@ -11,8 +11,9 @@ pipeline {
       }    
       stage('Test') {
         steps {
-          //sh 'docker container rm -f node'        
+          sh 'docker container rm -f node'        
           sh 'docker container run -p 8001:8080 --name node -d sanatabassum/test-node-app'        
+          sh 'sleep 10'
           sh 'curl -I http://localhost:8001'      
         }    
       }    

@@ -20,7 +20,7 @@ pipeline {
          steps{
             script {                
                 docker.withRegistry( '', registryCredential ) {                  
-                  sh 'docker push umermunirrr/test-node-app:latest'                
+                  sh 'docker push sanatabassum/test-node-app:latest'                
                 }            
             }        
          }      
